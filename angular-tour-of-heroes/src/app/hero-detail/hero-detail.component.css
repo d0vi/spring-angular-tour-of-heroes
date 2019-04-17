@@ -1,19 +1,19 @@
 label {
   display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
+  width: 4em;
+  color: #607d8b;
+  margin-bottom: 0.25em;
 }
 
 input {
-  height: 2em;
+  display: inline;
   font-size: 1em;
   padding-left: .4em;
 }
 
 button {
   margin-top: 20px;
+  margin-right: 10px;
   font-family: Arial;
   background-color: #eee;
   border: none;
