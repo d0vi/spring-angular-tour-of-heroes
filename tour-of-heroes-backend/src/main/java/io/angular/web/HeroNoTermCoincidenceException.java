@@ -1,11 +1,11 @@
 package io.angular.web;
 
-public class HeroNoTermCoincidenceException extends RuntimeException {
-  public HeroNoTermCoincidenceException() {
+class HeroNoTermCoincidenceException extends RuntimeException {
+  HeroNoTermCoincidenceException() {
     super();
   }
 
-  public HeroNoTermCoincidenceException(final String term) {
+  HeroNoTermCoincidenceException(final String term) {
     super("No coincidences for term " + term);
   }
 }

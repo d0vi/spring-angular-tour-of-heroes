@@ -1,7 +1,7 @@
 package io.angular.web;
 
-public class HeroIdMismatchException extends RuntimeException {
-  public HeroIdMismatchException() {
+class HeroIdMismatchException extends RuntimeException {
+  HeroIdMismatchException() {
     super();
   }
 }

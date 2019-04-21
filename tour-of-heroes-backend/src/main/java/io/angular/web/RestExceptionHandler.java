@@ -15,7 +15,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
   }
 
   @ExceptionHandler({HeroIdMismatchException.class})
-  public ResponseEntity<Object> handleBadRequest(Exception ex, WebRequest request) {
-    return handleExceptionInternal(ex, ex.getLocalizedMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+  public ResponseEntity<Object> handleBadRequest(Exception e, WebRequest request) {
+    return handleExceptionInternal(e, e.getLocalizedMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
   }
 }
