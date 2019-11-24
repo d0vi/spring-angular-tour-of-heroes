@@ -1,4 +1,4 @@
-package io.angular.web;
+package io.angular.heroes.web;
 
 class HeroNotFoundException extends RuntimeException {
   HeroNotFoundException() {

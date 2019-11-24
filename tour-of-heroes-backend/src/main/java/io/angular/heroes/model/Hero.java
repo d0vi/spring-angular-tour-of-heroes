@@ -1,4 +1,4 @@
-package io.angular.model;
+package io.angular.heroes.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

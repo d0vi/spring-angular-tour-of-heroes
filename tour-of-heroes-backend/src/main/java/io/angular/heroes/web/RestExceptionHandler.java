@@ -1,4 +1,4 @@
-package io.angular.web;
+package io.angular.heroes.web;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

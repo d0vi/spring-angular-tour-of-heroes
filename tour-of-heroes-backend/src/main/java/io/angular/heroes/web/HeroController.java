@@ -1,7 +1,7 @@
-package io.angular.web;
+package io.angular.heroes.web;
 
-import io.angular.model.Hero;
-import io.angular.repo.HeroRepository;
+import io.angular.heroes.model.Hero;
+import io.angular.heroes.repo.HeroRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class HeroController {
   @GetMapping("/{id}")
   public Hero getHero(@PathVariable Integer id) {
     return heroRepository.findById(id)
-      .orElseThrow(() -> new HeroNotFoundException(id));
+        .orElseThrow(() -> new HeroNotFoundException(id));
   }
 
   @PostMapping
@@ -45,14 +45,14 @@ public class HeroController {
       throw new HeroIdMismatchException();
     }
     return heroRepository.findById(id)
-      .map(hero -> {
-        hero.setName(updatedHero.getName());
-        return heroRepository.save(hero);
-      })
-      .orElseGet(() -> {
-        updatedHero.setId(id);
-        return heroRepository.save(updatedHero);
-      });
+        .map(hero -> {
+          hero.setName(updatedHero.getName());
+          return heroRepository.save(hero);
+        })
+        .orElseGet(() -> {
+          updatedHero.setId(id);
+          return heroRepository.save(updatedHero);
+        });
   }
 
   @DeleteMapping("/{id}")
