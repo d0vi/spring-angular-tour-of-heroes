@@ -1,12 +1,12 @@
 version: '3'
 services:
   be:
-    build:
-      context: ./tour-of-heroes-backend
+    build: ./tour-of-heroes-backend
     ports:
       - "8080:8080"
   fe:
-    build:
-      context: ./angular-tour-of-heroes
+    build: ./angular-tour-of-heroes
     ports:
       - "4200:80"
+    depends_on:
+      - be

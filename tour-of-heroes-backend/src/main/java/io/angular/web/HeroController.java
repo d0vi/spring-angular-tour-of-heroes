@@ -30,7 +30,8 @@ public class HeroController {
 
   @GetMapping("/{id}")
   public Hero getHero(@PathVariable Integer id) {
-    return heroRepository.findById(id).orElseThrow(() -> new HeroNotFoundException(id));
+    return heroRepository.findById(id)
+      .orElseThrow(() -> new HeroNotFoundException(id));
   }
 
   @PostMapping
@@ -43,13 +44,15 @@ public class HeroController {
     if (updatedHero.getId() != null && !updatedHero.getId().equals(id)) {
       throw new HeroIdMismatchException();
     }
-    return heroRepository.findById(id).map(hero -> {
-      hero.setName(updatedHero.getName());
-      return heroRepository.save(hero);
-    }).orElseGet(() -> {
-      updatedHero.setId(id);
-      return heroRepository.save(updatedHero);
-    });
+    return heroRepository.findById(id)
+      .map(hero -> {
+        hero.setName(updatedHero.getName());
+        return heroRepository.save(hero);
+      })
+      .orElseGet(() -> {
+        updatedHero.setId(id);
+        return heroRepository.save(updatedHero);
+      });
   }
 
   @DeleteMapping("/{id}")
