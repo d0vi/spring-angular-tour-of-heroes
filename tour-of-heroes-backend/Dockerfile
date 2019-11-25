@@ -7,7 +7,7 @@ RUN mvn -f /home/app clean package
 
 FROM openjdk:8-stretch
 
-COPY --from=build /home/app/target/heroes-1.1.0.jar /usr/local/lib/heroes.jar
+COPY --from=build /home/app/target/heroes-2.0.0-SNAPSHOT.jar /usr/local/lib/heroes.jar
 
 EXPOSE 8080
 
