@@ -1,10 +1,12 @@
 version: '3'
 services:
   be:
+    image: toh-be:2.0.0-SNAPSHOT
     build: ./tour-of-heroes-backend
     ports:
       - "8080:8080"
   fe:
+    image: toh-fe:2.0.0-SNAPSHOT
     build: ./angular-tour-of-heroes
     ports:
       - "4200:80"
