@@ -1,6 +1,6 @@
 FROM node:stretch AS build
 
-RUN npm install -g @angular/cli@7.3.8
+RUN npm install -g @angular/cli@8.3.20
 
 COPY . /usr/src/app
 
