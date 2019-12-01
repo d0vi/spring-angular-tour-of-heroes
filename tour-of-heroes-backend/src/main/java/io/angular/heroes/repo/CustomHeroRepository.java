@@ -1,6 +1,6 @@
-package io.angular.repo;
+package io.angular.heroes.repo;
 
-import io.angular.model.Hero;
+import io.angular.heroes.model.Hero;
 
 import java.util.List;
 

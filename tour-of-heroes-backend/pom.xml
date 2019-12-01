@@ -6,9 +6,13 @@
 
     <artifactId>heroes</artifactId>
     <groupId>io.angular</groupId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <name>spring-boot-heroes-be</name>
     <description>Spring application that accesses relational JPA data.</description>
+
+    <properties>
+        <java.version>13</java.version>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

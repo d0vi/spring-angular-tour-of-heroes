@@ -1,13 +1,11 @@
-package io.angular;
+package io.angular.heroes;
 
+import io.angular.heroes.model.Hero;
+import io.angular.heroes.repo.HeroRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import lombok.extern.slf4j.Slf4j;
-
-import io.angular.model.Hero;
-import io.angular.repo.HeroRepository;
 
 @Configuration
 @Slf4j

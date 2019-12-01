@@ -1,6 +1,6 @@
-package io.angular.repo;
+package io.angular.heroes.repo;
 
-import io.angular.model.Hero;
+import io.angular.heroes.model.Hero;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -27,7 +27,7 @@ public class CustomHeroRepositoryImpl implements CustomHeroRepository {
     TypedQuery<Hero> tq = entityManager.createQuery(cq);
     List<Hero> heroes = tq.getResultList();
     return heroes.stream()
-      .filter(h -> h.getName().toLowerCase().contains(term.toLowerCase()))
-      .collect(toList());
+        .filter(h -> h.getName().toLowerCase().contains(term.toLowerCase()))
+        .collect(toList());
   }
 }
